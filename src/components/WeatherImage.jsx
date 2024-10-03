@@ -1,17 +1,20 @@
 import React,{useContext} from "react";
-import { TiWeatherSunny, TiWeatherSnow, TiWeatherDownpour } from "react-icons/ti";
+// import { TiWeatherSunny, TiWeatherSnow, TiWeatherDownpour } from "react-icons/ti";
 
 import { WeatherContext } from "../context/DataContext";
 
 const WeatherImage = () => {
     const {weatherData} = useContext(WeatherContext);
-    console.log(weatherData);
+
+    if (!weatherData) {
+      return <div>Loading weather data...</div>;
+    };
+
     const { main, name, weather} = weatherData;
-    console.log(main,"maain")
-    // const weatherInfo = weather[0];
-    // const tempInCelcius = (main.temp - 32) * 5/9;
-    // console.log(weatherInfo,"weather")
-    const tempInCelcius = 20;
+    console.log(main, weather, name, "data received");
+    const weatherInfo = weather[0];
+    const tempInCelcius = ((main.temp - 32) * 5/9).toFixed(2);
+    console.log(weatherInfo,"weather")
   return (
     <div className="imgContainer">
       <div className="imageBox">
