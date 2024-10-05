@@ -22,7 +22,6 @@ const useDate = () => {
     hour12: true,
     minute: "numeric",
   });
-  return date, time;
+  return {date, time};
 };
-
 export default useDate;
