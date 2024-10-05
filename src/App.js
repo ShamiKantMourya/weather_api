@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <main>
-        {/* <WeatherImage /> */}
+        <WeatherImage />
         <div className="background-dark"></div>
         <aside className="sideBar">
           <SearchBar />
