@@ -35,8 +35,8 @@ const WeatherProvider = ({ children }) => {
       const data = await apiCall(city);
       setWeatherData(data);
       console.log(data.main);
-      setCity("");
-      console.log(weatherData, "weater data");
+      setInputValue("");
+      // console.log(weatherData, "weater data");
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
