@@ -3,11 +3,6 @@ import WeatherImage from "./components/WeatherImage";
 import SearchBar from "./components/SearchBar";
 
 function App() {
-  // console.log(weatherData, "weather data");
-  // const { main } = weatherData;
-  // console.log(main, "main")
-  // const tempInCelcius = (main.temp - 32) / 1.8;
-  // console.log(tempInCelcius, "temp in c");
   return (
     <div className="App">
       <main>
@@ -15,8 +10,9 @@ function App() {
         <div className="background-dark"></div>
         <aside className="sideBar">
           <SearchBar />
+          <p>Weather details.......</p>
           <div className="weather">
-            {/* <WeatherDetails /> */}
+            <WeatherDetails />
           </div>
         </aside>
       </main>
