@@ -9,6 +9,7 @@ const apiKey = process.env.REACT_APP_API_KEY;
 
 const WeatherProvider = ({ children }) => {
   const [city, setCity] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [weatherData, setWeatherData] = useState(null);
   const position = useUserLocation();
 
@@ -43,6 +44,8 @@ const WeatherProvider = ({ children }) => {
   const contextValues = {
     city,
     setCity,
+    inputValue,
+    setInputValue,
     weatherData,
     setWeatherData,
     fetchWeatherData,
