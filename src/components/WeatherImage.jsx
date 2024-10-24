@@ -3,6 +3,7 @@ import React,{useContext} from "react";
 import  useDate from "../hooks/useDate";
 import { WeatherContext } from "../context/DataContext";
 import WeatherLogo from "./WeatherLogo";
+import "../css/weatherImage.css";
 
 const WeatherImage = () => {
     const {weatherData} = useContext(WeatherContext);

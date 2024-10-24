@@ -1,13 +1,13 @@
 import WeatherDetails from "./components/WeatherDetails";
 import WeatherImage from "./components/WeatherImage";
 import SearchBar from "./components/SearchBar";
+import "./css/app.css";
 
 function App() {
   return (
-    <div className="App">
-      <main>
+      <main className="App">
         <WeatherImage />
-        <div className="background-dark"></div>
+        {/* <div className="background-dark"></div> */}
         <aside className="sideBar">
           <SearchBar />
           <p>Weather details.......</p>
@@ -16,7 +16,6 @@ function App() {
           </div>
         </aside>
       </main>
-    </div>
   );
 }
 
