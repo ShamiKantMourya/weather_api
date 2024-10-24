@@ -16,7 +16,7 @@ const WeatherImage = () => {
 
     const { main, name, weather} = weatherData;
     console.log(main, weather, name, "data received");
-    const weatherInfo = weather[0]; 
+    // const weatherInfo = weather[0]; 
     const tempInCelcius = (main.temp -  273.15).toFixed(2);
     // console.log(weatherInfo,"weather")
   return (
@@ -31,7 +31,7 @@ const WeatherImage = () => {
       )}
       </div>
       <div className="tempbox-container">
-      <h1 className="temp">{tempInCelcius}</h1>
+      <h1 className="temp">{tempInCelcius}°C</h1>
       <div className="temp-info">
         <h2 className="temp-location">{name}</h2>
         <div>
