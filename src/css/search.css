@@ -1,0 +1,25 @@
+.search_bar{
+    display: flex;
+    height: 2rem;
+    border-bottom: 2px solid rgba(253, 249, 249, 0.705);
+    align-items: center;
+    justify-content: space-between;
+    margin: 3rem 1rem;
+}
+.search_bar input{
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.search_bar input::placeholder{
+    color: aliceblue;
+    text-align: start;
+}
+.search_icon{
+    color: white;
+    font-size: 20px;
+    margin-right: 10px;
+}
