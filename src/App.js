@@ -5,17 +5,20 @@ import "./css/app.css";
 
 function App() {
   return (
-      <main className="App">
+    <div className="App">
+      <main className="main_body">
         <WeatherImage />
-        {/* <div className="background-dark"></div> */}
-        <aside className="sideBar">
-          <SearchBar />
-          <p>Weather details.......</p>
-          <div className="weather">
-            <WeatherDetails />
-          </div>
-        </aside>
       </main>
+      {/* <div className="background-dark"></div> */}
+      <aside className="sideBar">
+        <SearchBar />
+        <p>Weather details.......</p>
+        <hr></hr>
+        <div className="weather">
+          <WeatherDetails />
+        </div>
+      </aside>
+    </div>
   );
 }
 
