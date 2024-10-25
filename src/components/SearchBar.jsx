@@ -36,7 +36,7 @@ const SearchBar = () => {
         value={inputValue}
         onChange={handleChange}
       />
-      <FaSearchLocation onClick={fetchWeatherData} />
+      <FaSearchLocation onClick={fetchWeatherData} className="search_icon"/>
     </div>
   );
 };
