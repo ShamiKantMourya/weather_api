@@ -2,9 +2,10 @@ import React, { useContext, useEffect } from "react";
 import { FaSearchLocation } from "react-icons/fa";
 
 import { WeatherContext } from "../context/DataContext";
+import "../css/search.css";
 
 const SearchBar = () => {
-  const { city, setCity, fetchWeatherData, setInputValue, inputValue } =
+  const {setCity, fetchWeatherData, setInputValue, inputValue } =
     useContext(WeatherContext);
 
   const debounceTime = 500;
