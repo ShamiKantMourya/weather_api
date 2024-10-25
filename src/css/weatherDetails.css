@@ -1,0 +1,33 @@
+.weather_details {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 2rem 0 0 1.5rem;
+}
+.weather-values {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 10rem;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+.weather_details h3 {
+  color: white;
+  text-transform: uppercase;
+}
+.weather_description {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+}
+.hot_temp {
+  color: rgba(252, 105, 7, 0.63);
+  font-size: 20px;
+}
+.cold_temp {
+  color: rgba(19, 177, 240, 0.781);
+  font-size: 20px;
+}
