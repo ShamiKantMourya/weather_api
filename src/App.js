@@ -12,8 +12,7 @@ function App() {
       {/* <div className="background-dark"></div> */}
       <aside className="sideBar">
         <SearchBar />
-        <p>Weather details.......</p>
-        <hr></hr>
+        <p className="weather-detail-text">Weather details.......</p>
         <div className="weather">
           <WeatherDetails />
         </div>
