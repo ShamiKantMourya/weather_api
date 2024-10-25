@@ -4,7 +4,7 @@
     border-bottom: 2px solid rgba(253, 249, 249, 0.705);
     align-items: center;
     justify-content: space-between;
-    margin: 3rem 1rem;
+    margin: 3rem 1.5rem;
 }
 .search_bar input{
     border: none;
