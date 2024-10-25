@@ -15,6 +15,7 @@ const WeatherProvider = ({ children }) => {
 
   useEffect(() => {
     if (position) {
+      // console.log(position, "position");
       const { latitude, longitude } = position;
       const userLocationWeather = async () => {
         const response = await axios.get(
