@@ -35,7 +35,7 @@ const WeatherImage = () => {
       <h1 className="temp">{tempInCelcius}°C</h1>
       <div className="temp-info">
         <h2 className="temp-location">{name}</h2>
-        <div>
+        <div className="date-time">
           <p>{dateTime.date}</p>
           <p>{dateTime.time}</p>
         </div>
