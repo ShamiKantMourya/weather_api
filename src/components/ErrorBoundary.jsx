@@ -6,7 +6,7 @@ const ErrorBoundary = ({ children }) => {
   const handleError = () => {
     setHasError(true);
   };
-  console.log("hello error boundary")
+//   console.log("hello error boundary")
   return (
     <div>
       {hasError ? (
