@@ -4,15 +4,16 @@ import useDate from "../hooks/useDate";
 import { WeatherContext } from "../context/DataContext";
 import WeatherLogo from "./WeatherLogo";
 import "../css/weatherImage.css";
+import Loader from "../animation/Loader";
 
 const WeatherImage = () => {
   const { weatherData, errorMessage } = useContext(WeatherContext);
-  console.log(errorMessage, "errorMessage")
+  // console.log(errorMessage, "errorMessage")
 
   const dateTime = useDate();
 
   if (!weatherData) {
-    return <div>Loading weather data...</div>;
+    return <Loader />;
   }
 
   const { main, name, weather } = weatherData;

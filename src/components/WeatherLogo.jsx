@@ -11,12 +11,13 @@ import {
 } from "react-icons/ti";
 
 import { WeatherContext } from "../context/DataContext";
+import Loader from "../animation/Loader";
 
 const WeatherLogo = () => {
   const { weatherData } = useContext(WeatherContext);
 
   if (!weatherData) {
-    return <div>Loading weather data...</div>;
+    return <Loader />;
   }
 
   const { weather } = weatherData;
