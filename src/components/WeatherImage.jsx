@@ -4,7 +4,7 @@ import useDate from "../hooks/useDate";
 import { WeatherContext } from "../context/DataContext";
 import WeatherLogo from "./WeatherLogo";
 import "../css/weatherImage.css";
-import Loader from "../animation/Loader";
+import Loader from "./Loader";
 
 const WeatherImage = () => {
   const { weatherData, errorMessage } = useContext(WeatherContext);

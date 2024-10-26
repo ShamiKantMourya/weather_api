@@ -11,7 +11,7 @@ import {
 } from "react-icons/ti";
 
 import { WeatherContext } from "../context/DataContext";
-import Loader from "../animation/Loader";
+import Loader from "./Loader";
 
 const WeatherLogo = () => {
   const { weatherData } = useContext(WeatherContext);

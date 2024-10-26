@@ -3,7 +3,7 @@ import { FaTemperatureHalf, FaDroplet } from "react-icons/fa6";
 
 import { WeatherContext } from "../context/DataContext";
 import "../css/weatherDetails.css";
-import Loader from "../animation/Loader";
+import Loader from "./Loader";
 
 const WeatherDetails = () => {
   const { weatherData } = useContext(WeatherContext);
