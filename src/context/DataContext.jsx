@@ -7,15 +7,15 @@ import axios from "axios";
 const WeatherContext = createContext();
 const apiKey = process.env.REACT_APP_API_KEY;
 
-const WeatherProvider = ({ children }) => {
+const WeatherProvider = ({ children, onError }) => {
   const [city, setCity] = useState("");
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const [weatherData, setWeatherData] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
   const position = useUserLocation();
 
   useEffect(() => {
     if (position) {
-      // console.log(position, "position");
       const { latitude, longitude } = position;
       const userLocationWeather = async () => {
         const response = await axios.get(
@@ -27,17 +27,22 @@ const WeatherProvider = ({ children }) => {
       };
       userLocationWeather();
     } else {
-      console.error("Location not found yet....")
+      console.error("Location not found yet....");
     }
   }, [position]);
 
   const fetchWeatherData = async () => {
     try {
       const data = await apiCall(city);
-      setWeatherData(data);
-      console.log(data.main);
-      setInputValue("");
-      // console.log(weatherData, "weater data");
+      console.log(data.message, data.status, "data");
+      if (data.status !== 404) {
+        setWeatherData(data);
+        setInputValue("");
+        setErrorMessage("");
+      } else {
+        if (onError) onError();
+        setErrorMessage("No city found with this name. Please refresh the page and try again");
+      }
     } catch (error) {
       console.error("Error fetching weather data:", error);
     }
@@ -45,6 +50,7 @@ const WeatherProvider = ({ children }) => {
   const contextValues = {
     city,
     setCity,
+    errorMessage,
     inputValue,
     setInputValue,
     weatherData,
