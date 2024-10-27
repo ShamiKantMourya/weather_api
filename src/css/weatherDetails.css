@@ -1,5 +1,6 @@
 .weather_details {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 2rem 0 0 1.5rem;
@@ -22,6 +23,7 @@
   justify-content: space-between;
   align-items: center;
   color: aliceblue;
+  padding-right: 1.2rem;
 }
 .hot_temp {
   color: rgba(252, 105, 7, 0.63);

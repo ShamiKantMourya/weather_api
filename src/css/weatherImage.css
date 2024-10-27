@@ -18,7 +18,7 @@
   justify-content: space-around;
   position: relative;
   left: 10rem;
-  top: 30rem;
+  top: 25rem;
   backdrop-filter: blur(9px) saturate(158%);
   -webkit-backdrop-filter: blur(6px) saturate(158%);
   background-color: rgba(180, 210, 247, 0.178);
@@ -36,6 +36,8 @@
 }
 .date-time{
   color: aliceblue;
+  display: flex;
+  align-items: center;
 }
 .date-time p{
   padding: 5px;
@@ -43,4 +45,17 @@
 .weather-logo{
   color: aliceblue;
   font-size: 40px;
+}
+@media (max-width: 678px) {
+.tempbox-container{
+  top: 10px;
+  left: 30px;
+  width: 20rem;
+  flex-direction: column;
+}
+.date-time{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 }

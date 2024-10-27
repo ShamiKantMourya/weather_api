@@ -1,7 +1,7 @@
 .App {
   display: grid;
   grid-template-columns: 4fr 1.4fr;
-  /* width: 100dvw; */
+  width: 100dvw;
   height: 100dvh;
 }
 .main_body {

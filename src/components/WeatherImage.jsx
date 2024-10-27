@@ -50,11 +50,11 @@ const WeatherImage = () => {
                 <h2 className="temp-location">{name}</h2>
                 <div className="date-time">
                   <p>{dateTime.date}</p>
-                  <p>{dateTime.time}</p>
+                  <p>{dateTime.time}</p>{" "}
+                  <div className="weather-logo">
+                    <WeatherLogo />
+                  </div>
                 </div>
-              </div>
-              <div className="weather-logo">
-                <WeatherLogo />
               </div>
             </div>
           </div>
